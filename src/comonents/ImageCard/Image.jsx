@@ -1,33 +1,24 @@
-import React, { useRef } from "react";
+import React, { useEffect } from "react";
 import oldman from "../../utils/oldperson.jpeg";
 import singer from "../../utils/arijitsingh.jpeg";
 import videocall from "../../utils/callmeplz.jpeg";
 import styles from "./Image.module.css";
 
 const Image = () => {
-  const carouselRef = useRef(null);
-  let touchStartX = 0;
+  useEffect(() => {
+    const clickSecondButton = setTimeout(() => {
+      document.querySelector("[data-bs-slide-to='1']").click();
+    }, 100); // Delay in milliseconds before clicking the second button
 
-  const handleTouchStart = (e) => {
-    touchStartX = e.touches[0].clientX;
-  };
+    const clickFirstButton = setTimeout(() => {
+      document.querySelector("[data-bs-slide-to='0']").click();
+    }, 200); // Delay in milliseconds before clicking the first button after the second button
 
-  const handleTouchMove = (e) => {
-    const touchEndX = e.touches[0].clientX;
-    const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > 50) {
-      // Adjust the threshold as needed
-      if (diff > 0) {
-        carouselRef.current.setAttribute("data-bs-slide", "next");
-      } else {
-        carouselRef.current.setAttribute("data-bs-slide", "prev");
-      }
-    }
-  };
-
-  const handleTouchEnd = () => {
-    carouselRef.current.removeAttribute("data-bs-slide");
-  };
+    return () => {
+      clearTimeout(clickSecondButton);
+      clearTimeout(clickFirstButton);
+    };
+  }, []); // useEffect runs only once after component mount
 
   return (
     <div>
@@ -35,18 +26,12 @@ const Image = () => {
         id="carouselExampleDark"
         className="carousel carousel-dark slide"
         data-bs-ride="carousel"
-        ref={carouselRef}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
       >
         <div className="carousel-indicators">
           <button
             type="button"
             data-bs-target="#carouselExampleDark"
             data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
             aria-label="Slide 1"
           ></button>
           <button
