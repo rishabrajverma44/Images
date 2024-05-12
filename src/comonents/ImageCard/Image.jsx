@@ -38,7 +38,7 @@ const Image = () => {
           class={`carousel-inner ${styles.carosel}`}
           style={{ height: "80vh" }}
         >
-          <div class="carousel-item active h-100" data-bs-interval="10000">
+          <div class="carousel-item active h-100" data-bs-interval="100">
             <img
               src={singer}
               class={`d-block mx-auto h-100 w-auto ${styles.image}`}
