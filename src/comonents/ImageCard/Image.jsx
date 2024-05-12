@@ -6,12 +6,6 @@ import styles from "./Image.module.css";
 
 const Image = () => {
   useEffect(() => {
-    const timerSlide2 = setTimeout(() => {
-      const buttonSlide2 = document.querySelector('[data-bs-slide-to="1"]');
-      if (buttonSlide2) {
-        buttonSlide2.click();
-      }
-    }, 1);
     const timerSlide1 = setTimeout(() => {
       const buttonSlide1 = document.querySelector('[data-bs-slide-to="0"]');
       if (buttonSlide1) {
@@ -21,7 +15,6 @@ const Image = () => {
 
     return () => {
       clearTimeout(timerSlide1);
-      clearTimeout(timerSlide2);
     };
   }, []);
   return (
