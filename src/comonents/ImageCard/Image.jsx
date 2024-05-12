@@ -1,16 +1,45 @@
-import React from "react";
+import React, { useRef } from "react";
 import oldman from "../../utils/oldperson.jpeg";
 import singer from "../../utils/arijitsingh.jpeg";
 import videocall from "../../utils/callmeplz.jpeg";
 import styles from "./Image.module.css";
 
 const Image = () => {
+  const carouselRef = useRef(null);
+
+  const handleTouchStart = (e) => {
+    const touchStartX = e.touches[0].clientX;
+    carouselRef.current.dataset.touchStartX = touchStartX;
+  };
+
+  const handleTouchMove = (e) => {
+    const touchEndX = e.touches[0].clientX;
+    const touchStartX = carouselRef.current.dataset.touchStartX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      // Adjust the threshold as needed
+      if (diff > 0) {
+        carouselRef.current.setAttribute("data-bs-slide", "next");
+      } else {
+        carouselRef.current.setAttribute("data-bs-slide", "prev");
+      }
+    }
+  };
+
+  const handleTouchEnd = () => {
+    carouselRef.current.removeAttribute("data-bs-slide");
+  };
+
   return (
     <div>
       <div
         id="carouselExampleDark"
-        class="carousel carousel-dark slide"
+        className="carousel carousel-dark slide"
         data-bs-ride="carousel"
+        ref={carouselRef}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         <div class="carousel-indicators">
           <button
