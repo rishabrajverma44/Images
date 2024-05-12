@@ -29,9 +29,9 @@ const Header = () => {
 
   return (
     <div className="nav w-100 p-1">
-      <div className="h-100 item-center">
+      <div className="h-100 d-flex align-items-center">
         <img
-          style={{ height: "100%", paddingBottom: "5px", cursor: "pointer" }}
+          style={{ height: "100%", cursor: "pointer" }}
           src={logo}
           alt="logo_img"
         />{" "}

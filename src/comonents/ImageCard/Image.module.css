@@ -6,9 +6,10 @@
 .carosel {
   background-color: rgb(179, 194, 216);
 }
+
 .parra {
   color: rgb(255, 255, 255);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 .image {
@@ -42,6 +43,9 @@
   .image {
     width: 100vw;
     height: auto;
+  }
+  .caption {
+    width: 80%;
   }
   .parra {
     font-size: 1rem;

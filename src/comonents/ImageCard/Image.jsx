@@ -11,7 +11,7 @@ const Image = () => {
       if (buttonSlide1) {
         buttonSlide1.click();
       }
-    }, 2);
+    }, 1);
 
     return () => {
       clearTimeout(timerSlide1);
@@ -49,14 +49,17 @@ const Image = () => {
           class={`carousel-inner ${styles.carosel}`}
           style={{ height: "80vh" }}
         >
-          <div class="carousel-item active h-100" data-bs-interval="10000">
+          <div
+            class={`carousel-item active h-100 ${styles.carosel_item}`}
+            data-bs-interval="10000"
+          >
             <img
               src={singer}
               class={`d-block mx-auto h-100 w-auto ${styles.image}`}
               alt="singer"
             />
-            <div class="carousel-caption d-block">
-              <p className={`${styles.parra}`}>
+            <div class={`carousel-caption d-block ${styles.caption}`}>
+              <p className={`fw-bolder ${styles.parra}`}>
                 Introducing Sehalo, the innovative app designed to bridge the
                 gap between artists and audiences, all under the overarching
                 theme of "Art with Emotions". Our platform's Public mode serves
@@ -78,8 +81,8 @@ const Image = () => {
               class={`d-block mx-auto h-100 w-auto ${styles.image}`}
               alt="old man"
             />
-            <div class="carousel-caption d-block">
-              <p className={`${styles.parra}`}>
+            <div class={`carousel-caption d-block ${styles.caption}`}>
+              <p className={`fw-bolder ${styles.parra}`}>
                 But Sehalo isn't just about the public display of art; it's also
                 about nurturing personal well-being. With our private mode,
                 we've curated a collection of resources and tools. In today's
@@ -97,8 +100,8 @@ const Image = () => {
               class={`d-block mx-auto h-100 w-auto ${styles.image}`}
               alt="boy & girl"
             />
-            <div class="carousel-caption d-block">
-              <p className={`${styles.parra}`}>
+            <div class={`carousel-caption d-block ${styles.caption}`}>
+              <p className={`fw-bolder ${styles.parra}`}>
                 Ready to embark on a journey of artistic discovery and personal
                 growth? Install Sehalo now and join our community of passionate
                 artists and individuals dedicated to exploring the profound
