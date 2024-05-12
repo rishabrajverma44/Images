@@ -29,8 +29,13 @@ const Header = () => {
 
   return (
     <div className="nav w-100 p-1">
-      <div className="h-100">
-        <img style={{ height: "100%" }} src={logo} alt="logo_img" />
+      <div className="h-100 item-center">
+        <img
+          style={{ height: "100%", paddingBottom: "5px" }}
+          src={logo}
+          alt="logo_img"
+        />{" "}
+        <span style={{ fontSize: "40px" }}> Sehalo</span>
       </div>
       <div>
         <ul id="navbar" className={`navbar ${!isMenuOpen ? "active" : ""}`}>

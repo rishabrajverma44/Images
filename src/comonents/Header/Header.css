@@ -9,6 +9,7 @@
   align-items: center;
   flex-direction: row;
 }
+
 #navbar {
   display: flex;
   justify-content: center;
@@ -62,7 +63,8 @@
     color: rgb(12, 35, 35);
     font-weight: bold;
     font-size: 1rem;
-    box-shadow: 0 10px 10px black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 15px;
     padding: 10px 0 0 10px;
     transition: 0.6s ease-in-out;
     z-index: 50;
@@ -79,5 +81,6 @@
     color: rgb(12, 35, 35);
     display: block;
     cursor: pointer;
+    padding-right: 25px;
   }
 }

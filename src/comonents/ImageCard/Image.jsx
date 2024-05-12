@@ -40,28 +40,9 @@ const Image = () => {
         >
           <div class="carousel-item active h-100" data-bs-interval="10000">
             <img
-              src={oldman}
+              src={singer}
               class={`d-block mx-auto h-100 w-auto ${styles.image}`}
-              alt="old man image"
-            />
-            <div class="carousel-caption d-block">
-              <p className={`${styles.parra}`}>
-                But Sehalo isn't just about the public display of art; it's also
-                about nurturing personal well-being. With our private mode,
-                we've curated a collection of resources and tools. In today's
-                fast-paced world, it's easy to neglect our emotional well-being,
-                which is why Sehalo is committed to providing a sanctuary where
-                users can find solace, support, and inspiration. Sehalo's
-                private mode is here to help, Let's check the meter of your
-                Happiness in the Private mode of Sehalo app.{" "}
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item h-100" data-bs-interval="2000">
-            <img
-              src={videocall}
-              class={`d-block mx-auto h-100 w-auto ${styles.image}`}
-              alt="video call image"
+              alt="singer"
             />
             <div class="carousel-caption d-block">
               <p className={`${styles.parra}`}>
@@ -80,11 +61,30 @@ const Image = () => {
               </p>
             </div>
           </div>
+          <div class="carousel-item h-100" data-bs-interval="2000">
+            <img
+              src={oldman}
+              class={`d-block mx-auto h-100 w-auto ${styles.image}`}
+              alt="old man"
+            />
+            <div class="carousel-caption d-block">
+              <p className={`${styles.parra}`}>
+                But Sehalo isn't just about the public display of art; it's also
+                about nurturing personal well-being. With our private mode,
+                we've curated a collection of resources and tools. In today's
+                fast-paced world, it's easy to neglect our emotional well-being,
+                which is why Sehalo is committed to providing a sanctuary where
+                users can find solace, support, and inspiration. Sehalo's
+                private mode is here to help, Let's check the meter of your
+                Happiness in the Private mode of Sehalo app.
+              </p>
+            </div>
+          </div>
           <div class="carousel-item h-100">
             <img
-              src={singer}
+              src={videocall}
               class={`d-block mx-auto h-100 w-auto ${styles.image}`}
-              alt="singer image"
+              alt="boy & girl"
             />
             <div class="carousel-caption d-block">
               <p className={`${styles.parra}`}>

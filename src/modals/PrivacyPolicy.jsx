@@ -283,7 +283,7 @@ const PrivacyPolicy = () => {
                   </a>
                   ,{" "}
                   <a href="mailto:contact@manaChoice1493@gmail.com">
-                    belinvo777@gmail.com
+                    Bharath.director@belinvo.com
                   </a>
                 </p>
               </div>
