@@ -6,15 +6,14 @@ import styles from "./Image.module.css";
 
 const Image = () => {
   const carouselRef = useRef(null);
+  let touchStartX = 0;
 
   const handleTouchStart = (e) => {
-    const touchStartX = e.touches[0].clientX;
-    carouselRef.current.dataset.touchStartX = touchStartX;
+    touchStartX = e.touches[0].clientX;
   };
 
   const handleTouchMove = (e) => {
     const touchEndX = e.touches[0].clientX;
-    const touchStartX = carouselRef.current.dataset.touchStartX;
     const diff = touchStartX - touchEndX;
     if (Math.abs(diff) > 50) {
       // Adjust the threshold as needed
@@ -41,12 +40,13 @@ const Image = () => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div class="carousel-indicators">
+        <div className="carousel-indicators">
           <button
             type="button"
             data-bs-target="#carouselExampleDark"
             data-bs-slide-to="0"
-            class="active"
+            className="active"
+            aria-current="true"
             aria-label="Slide 1"
           ></button>
           <button
@@ -63,16 +63,16 @@ const Image = () => {
           ></button>
         </div>
         <div
-          class={`carousel-inner ${styles.carosel}`}
+          className={`carousel-inner ${styles.carosel}`}
           style={{ height: "80vh" }}
         >
-          <div class="carousel-item active h-100" data-bs-interval="10000">
+          <div className="carousel-item active h-100" data-bs-interval="10000">
             <img
               src={singer}
-              class={`d-block mx-auto h-100 w-auto ${styles.image}`}
+              className={`d-block mx-auto h-100 w-auto ${styles.image}`}
               alt="singer"
             />
-            <div class="carousel-caption d-block">
+            <div className="carousel-caption d-block">
               <p className={`${styles.parra}`}>
                 Introducing Sehalo, the innovative app designed to bridge the
                 gap between artists and audiences, all under the overarching
@@ -89,13 +89,13 @@ const Image = () => {
               </p>
             </div>
           </div>
-          <div class="carousel-item h-100" data-bs-interval="2000">
+          <div className="carousel-item h-100" data-bs-interval="2000">
             <img
               src={oldman}
-              class={`d-block mx-auto h-100 w-auto ${styles.image}`}
+              className={`d-block mx-auto h-100 w-auto ${styles.image}`}
               alt="old man"
             />
-            <div class="carousel-caption d-block">
+            <div className="carousel-caption d-block">
               <p className={`${styles.parra}`}>
                 But Sehalo isn't just about the public display of art; it's also
                 about nurturing personal well-being. With our private mode,
@@ -108,13 +108,13 @@ const Image = () => {
               </p>
             </div>
           </div>
-          <div class="carousel-item h-100">
+          <div className="carousel-item h-100">
             <img
               src={videocall}
-              class={`d-block mx-auto h-100 w-auto ${styles.image}`}
+              className={`d-block mx-auto h-100 w-auto ${styles.image}`}
               alt="boy & girl"
             />
-            <div class="carousel-caption d-block">
+            <div className="carousel-caption d-block">
               <p className={`${styles.parra}`}>
                 Ready to embark on a journey of artistic discovery and personal
                 growth? Install Sehalo now and join our community of passionate
