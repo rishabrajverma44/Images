@@ -10,7 +10,7 @@
 .parra {
   color: rgb(255, 255, 255);
   font-size: 1.8rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.9);
 }
 .image {
   margin: 10px;
@@ -49,5 +49,6 @@
   }
   .parra {
     font-size: 1rem;
+    text-shadow: 10px 2px 10px rgba(0, 0, 0, 0.9);
   }
 }
