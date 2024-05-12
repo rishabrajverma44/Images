@@ -6,14 +6,23 @@ import styles from "./Image.module.css";
 
 const Image = () => {
   useEffect(() => {
-    const timer = setTimeout(() => {
-      const button = document.querySelector('[data-bs-slide-to="1"]');
-      if (button) {
-        button.click();
+    const timerSlide2 = setTimeout(() => {
+      const buttonSlide2 = document.querySelector('[data-bs-slide-to="1"]');
+      if (buttonSlide2) {
+        buttonSlide2.click();
       }
-    }, 2000); // Delay in milliseconds
+    }, 1);
+    const timerSlide1 = setTimeout(() => {
+      const buttonSlide1 = document.querySelector('[data-bs-slide-to="0"]');
+      if (buttonSlide1) {
+        buttonSlide1.click();
+      }
+    }, 2);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timerSlide1);
+      clearTimeout(timerSlide2);
+    };
   }, []);
   return (
     <div>
