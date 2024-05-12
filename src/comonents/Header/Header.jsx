@@ -28,7 +28,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="nav w-100 p-3">
+    <div className="nav w-100 p-1">
       <div className="h-100">
         <img style={{ height: "100%" }} src={logo} alt="logo_img" />
       </div>
@@ -44,9 +44,9 @@ const Header = () => {
       </div>
       <div id="mobile" onClick={toggleMenu}>
         {isMenuOpen ? (
-          <i className="fas fa-times fs-1"></i>
+          <i className="fas fa-times fs-1" style={{ color: "white" }}></i>
         ) : (
-          <i className="fas fa-bars fs-1"></i>
+          <i className="fas fa-bars fs-1" style={{ color: "white" }}></i>
         )}
       </div>
     </div>

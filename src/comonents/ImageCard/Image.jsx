@@ -2,10 +2,11 @@ import React from "react";
 import oldman from "../../utils/oldperson.jpeg";
 import singer from "../../utils/arijitsingh.jpeg";
 import videocall from "../../utils/callmeplz.jpeg";
+import styles from "./Image.module.css";
 
 const Image = () => {
   return (
-    <div style={{ marginTop: "2vh" }}>
+    <div>
       <div
         id="carouselExampleDark"
         class="carousel carousel-dark slide"
@@ -33,12 +34,18 @@ const Image = () => {
             aria-label="Slide 3"
           ></button>
         </div>
-        <div class="carousel-inner" style={{ height: "78vh" }}>
+        <div
+          class={`carousel-inner ${styles.carosel}`}
+          style={{ height: "80vh" }}
+        >
           <div class="carousel-item active h-100" data-bs-interval="10000">
-            <img src={oldman} class="d-block mx-auto h-100 w-auto" alt="..." />
+            <img
+              src={oldman}
+              class={`d-block mx-auto h-100 w-auto ${styles.image}`}
+              alt="old man image"
+            />
             <div class="carousel-caption d-block">
-              <h5>First</h5>
-              <p>
+              <p className={`${styles.parra}`}>
                 But Sehalo isn't just about the public display of art; it's also
                 about nurturing personal well-being. With our private mode,
                 we've curated a collection of resources and tools. In today's
@@ -53,12 +60,11 @@ const Image = () => {
           <div class="carousel-item h-100" data-bs-interval="2000">
             <img
               src={videocall}
-              class="d-block mx-auto h-100 w-auto"
-              alt="..."
+              class={`d-block mx-auto h-100 w-auto ${styles.image}`}
+              alt="video call image"
             />
             <div class="carousel-caption d-block">
-              <h5>Second</h5>
-              <p>
+              <p className={`${styles.parra}`}>
                 Introducing Sehalo, the innovative app designed to bridge the
                 gap between artists and audiences, all under the overarching
                 theme of "Art with Emotions". Our platform's Public mode serves
@@ -75,10 +81,13 @@ const Image = () => {
             </div>
           </div>
           <div class="carousel-item h-100">
-            <img src={singer} class="d-block mx-auto h-100 w-auto" alt="..." />
+            <img
+              src={singer}
+              class={`d-block mx-auto h-100 w-auto ${styles.image}`}
+              alt="singer image"
+            />
             <div class="carousel-caption d-block">
-              <h5>Third</h5>
-              <p>
+              <p className={`${styles.parra}`}>
                 Ready to embark on a journey of artistic discovery and personal
                 growth? Install Sehalo now and join our community of passionate
                 artists and individuals dedicated to exploring the profound

@@ -1,0 +1,49 @@
+.image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.carosel {
+  background-color: rgb(179, 194, 216);
+}
+.parra {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.image {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.image:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes borderAnim {
+  0% {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    border-color: rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.image:hover {
+  animation: borderAnim 1s infinite;
+}
+
+@media (max-width: 576px) {
+  .image {
+    width: 100vw;
+    height: auto;
+  }
+  .parra {
+    font-size: 1rem;
+  }
+}

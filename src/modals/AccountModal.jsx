@@ -104,9 +104,9 @@ const AccountModal = () => {
         }}
         style={{ marginTop: "20vh" }}
       >
-        <Modal.Header closeButton>
-          <Modal.Title className={styles.title}>
-            manaChoice
+        <Modal.Header closeButton className={styles.title}>
+          <Modal.Title>
+            Sehalo
             <span>
               <img src={leafImag} alt="leafImage" className={styles.leafImag} />
             </span>

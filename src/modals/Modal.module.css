@@ -9,7 +9,8 @@
   text-decoration: none;
 }
 .title {
-  color: rgb(12, 35, 35);
+  color: rgb(255, 255, 255);
+  background-color: rgb(38, 32, 32);
   font-size: 2.1rem;
   font-weight: 600;
 }
@@ -26,8 +27,12 @@ p {
   font-size: 15px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .modal {
-    max-width: 1000px;
+    max-width: 80%;
+    margin: auto;
+    width: 100px;
+    height: auto;
+    color: rgb(255, 30, 229);
   }
 }
