@@ -18,23 +18,19 @@ const Image = () => {
             data-bs-target="#carouselExampleDark"
             data-bs-slide-to="0"
             class="active"
-            aria-current="true"
             aria-label="Slide 1"
-            onTouchStart={(e) => e.stopPropagation()}
           ></button>
           <button
             type="button"
             data-bs-target="#carouselExampleDark"
             data-bs-slide-to="1"
             aria-label="Slide 2"
-            onTouchStart={(e) => e.stopPropagation()}
           ></button>
           <button
             type="button"
             data-bs-target="#carouselExampleDark"
             data-bs-slide-to="2"
             aria-label="Slide 3"
-            onTouchStart={(e) => e.stopPropagation()}
           ></button>
         </div>
         <div
