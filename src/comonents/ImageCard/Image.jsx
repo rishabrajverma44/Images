@@ -1,45 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import oldman from "../../utils/oldperson.jpeg";
 import singer from "../../utils/arijitsingh.jpeg";
 import videocall from "../../utils/callmeplz.jpeg";
 import styles from "./Image.module.css";
 
 const Image = () => {
-  const [touchStartX, setTouchStartX] = useState(0);
-  const [touchEndX, setTouchEndX] = useState(0);
-
-  const handleTouchStart = (e) => {
-    setTouchStartX(e.touches[0].clientX);
-  };
-
-  const handleTouchMove = (e) => {
-    setTouchEndX(e.touches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) {
-        document
-          .getElementById("carouselExampleDark")
-          .setAttribute("data-bs-slide", "next");
-      } else if (diff < 0) {
-        document
-          .getElementById("carouselExampleDark")
-          .setAttribute("data-bs-slide", "prev");
-      }
-    }
-  };
-
   return (
     <div>
       <div
         id="carouselExampleDark"
-        className="carousel carousel-dark slide"
+        class="carousel carousel-dark slide"
         data-bs-ride="carousel"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
       >
         <div class="carousel-indicators">
           <button
@@ -49,18 +20,21 @@ const Image = () => {
             class="active"
             aria-current="true"
             aria-label="Slide 1"
+            onTouchStart={(e) => e.stopPropagation()}
           ></button>
           <button
             type="button"
             data-bs-target="#carouselExampleDark"
             data-bs-slide-to="1"
             aria-label="Slide 2"
+            onTouchStart={(e) => e.stopPropagation()}
           ></button>
           <button
             type="button"
             data-bs-target="#carouselExampleDark"
             data-bs-slide-to="2"
             aria-label="Slide 3"
+            onTouchStart={(e) => e.stopPropagation()}
           ></button>
         </div>
         <div
