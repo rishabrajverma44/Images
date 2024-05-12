@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Modal.module.css";
-import leafImag from "../utils/leaf.png";
+import leafImag from "../utils/logo.png";
 
 const PrivacyPolicy = () => {
   const [showModal, setShowModal] = useState(false);

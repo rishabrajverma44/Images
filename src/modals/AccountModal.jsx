@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import Modal from "react-bootstrap/Modal";
 import styles from "./Modal.module.css";
-import leafImag from "../utils/leaf.png";
+import leafImag from "../utils/logo.png";
 import { toast } from "react-toastify";
 import axios from "axios";
 
